@@ -26,20 +26,20 @@ module Ghost
   Промежуточные числа получаются сложением соседних чисел вышестоящей строки.
 =end
   
-	def pascalTriangle(n)
+  def pascalTriangle(n)
     r = [1]
     res = [r]
-		while n > 0
-			rn = [1]
-			for i in (0..r.size - 2)
-				rn << r[i] + r[i + 1]
-			end
-			r = (rn << 1)
+    while n > 0
+    rn = [1]
+      for i in (0..r.size - 2)
+        rn << r[i] + r[i + 1]
+      end
+      r = (rn << 1)
       res << rn
-			n -= 1
-		end
-		res
-	end
+      n -= 1
+    end
+    res
+  end
   
 =begin
   (4)
