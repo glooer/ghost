@@ -169,5 +169,19 @@ module Ghost
     max = h.max_by{|k, v| v}.last
     p h.select{|k, v| v == max}.keys
   end
+
+=begin
+  (20)
+  Мажорнирующим??? элементом массива А[1..N] принято называть элемент, встречающийся в массиве более N/2 раз. Определите, есть ли такой элемент в массиве, если есть укажите его и его местонахождение
+
+=end
+  
+  def major(arr)
+    h = arr.uniq.inject({}){|h, v| h[v] = arr.count(v); h}
+    q = h.select{|k, v| arr.size / 2 < v}
+    return nil if q.empty?
+    q
+    
+  end
   
 end

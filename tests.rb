@@ -71,6 +71,10 @@ p maxPrimeByBin(1000)
 p annagram("a", "a")
 p annagram("aab", "ab")
 
-'''
+
 
 foundRepeatMax([1,2,3,3,3,2,2,2,3])
+
+'''
+
+p major([1,2,2,2,2,2,2,2,2,3,4,5,6])
