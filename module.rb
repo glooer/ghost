@@ -159,6 +159,15 @@ module Ghost
     bigtext.scan(/\d+/).map{|v| v.to_i}.max
   end
   
-
+=begin
+  (19)
+  В массиве чисел M(n) найти число (или числа), повторяющиеся масимальное количество раз.
+=end
+  
+  def foundRepeatMax(arr)
+    h = arr.uniq.inject({}){|h, v| h[v] = arr.count(v); h}
+    max = h.max_by{|k, v| v}.last
+    p h.select{|k, v| v == max}.keys
+  end
   
 end
