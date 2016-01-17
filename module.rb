@@ -149,7 +149,16 @@ module Ghost
     s1.split("").sort.join.include?(s2.split("").sort.join)
   end
   
+=begin
+  (18)
+  Составить программу нахождения максимального из имеющихся в текстовом файле чисел. Текстовый файл содержит произвольный текст.
   
+  #FIXME работу с файлом мне запили!
+=end 
+  def s18(bigtext)
+    bigtext.scan(/\d+/).map{|v| v.to_i}.max
+  end
   
+
   
 end
