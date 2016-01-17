@@ -140,4 +140,16 @@ module Ghost
     maxPrimeI
   end
   
+=begin
+  (15)
+  Написать программу, которая проверяет, можно ли из букв, входящих в слово А составить слово В.
+=end
+
+  def annagram(s1, s2)
+    s1.split("").sort.include?(s2.split("").sort)
+  end
+  
+  
+  
+  
 end
