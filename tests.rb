@@ -75,6 +75,9 @@ p annagram("aab", "ab")
 
 foundRepeatMax([1,2,3,3,3,2,2,2,3])
 
-'''
 
 p major([1,2,2,2,2,2,2,2,2,3,4,5,6])
+'''
+
+automorph(1, 1000)
+
