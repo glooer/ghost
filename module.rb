@@ -20,6 +20,7 @@ module Ghost
   end
 
 =begin
+  (3)
   Получить треугольник Паскаля
   В верхней строке пишутся две единицы.
   Все  последующие строки начинаются и заканчиваются еденицами.
@@ -93,4 +94,29 @@ module Ghost
     res
   end
 
+=begin
+  (7)
+  Написать программу, которая в заданном предложении выводит слово (или слова), в котором(ых) доля гласных букв русского алфавита максимальна.
+  
+  #FIXME downcase для русских букв не работает, нужен велосипед, или подключай гем unicode и используй Unicode::downcase
+=end
+
+  def maxVowels(str)
+    vowels = %w(а у о ы и э я ю ё е)
+    words = str.downcase.split.map{|v| v.gsub(/[^а-я]/i, "")}
+    
+    h = {}
+    words.each do |v|
+      share = v.size.to_f / (v.size - (v.split("") - vowels).size) #точно будет доля гласных? а ещё деление на 0 может быть...
+      if h[share].nil?
+        h[share] = [v]
+      else
+        h[share] << v
+      end
+    end
+    p h.min.last
+  end
+  
+  
+  
 end
