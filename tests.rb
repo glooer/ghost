@@ -58,15 +58,10 @@ end
 
 ###
 
-
+'''
 
 
 p maxPrimeByBin(1)
 p maxPrimeByBin(10)
 p maxPrimeByBin(100)
 p maxPrimeByBin(1000)
-
-'''
-
-
-p annagram("s", "a")
