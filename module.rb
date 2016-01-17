@@ -117,6 +117,27 @@ module Ghost
     p h.min.last
   end
   
+=begin
+  (9)
+  Напишите программу решения следующей задачи: "Среди простых чисел, не превосходнящх n, найти такое, в двоичной записи которого максимальное количество едениц. Число назывется простым, если оно не имеет других делителей, кроме 1 и самого себя"
+=end
   
+  def maxPrimeByBin(n)
+    def prime?(n)
+      for i in (2...n)
+        return false if (n % i).zero?
+      end
+      return true
+    end
+    maxPrimeI = n
+    maxPrimeCountOnes = 0
+    for i in (2..n)
+      if prime?(i) and maxPrimeCountOnes < i.to_s(2).count("1")
+         maxPrimeCountOnes = i.to_s(2).count("1")
+         maxPrimeI = i
+      end
+    end
+    maxPrimeI
+  end
   
 end
