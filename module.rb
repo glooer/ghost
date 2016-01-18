@@ -1,6 +1,24 @@
 module Ghost
 
 =begin
+  (1)
+  "Считалка". N ребят располагаются по кругу. Отсчет начинают от первого, удаляют каждого k-го, смыкая круг после каждого удаления. Определите порядок удаления ребят из круга. Замечание. Если k>0, то отсчет ведется по часовой стрелке, иначе против часовой
+=end
+
+  def rhyme(n, k)
+    arr = (1..n).to_a
+    return arr if n < k.abs
+    
+    res = []
+    #jghgjwhile k < arr.size
+    #  i = k
+      
+    #end
+    
+    p res
+  end
+
+=begin
   (2)
   Зашифровать текст (не более 255 символов) из входного файла, 
   используя перешенанный алфавит. 
@@ -195,7 +213,31 @@ module Ghost
     q = h.select{|k, v| arr.size / 2 < v}
     return nil if q.empty?
     q
+  end
+  
+=begin
+  (24) 
+  Число из n цифр называется числом Армстронга, если сумма его цифр в степени n равна самому числу. Например: 1634 = 14 + 64 + 34 + 44. Составить программу, находящую все числа Армстронга среди двузначных и трехзначных чисел.
+=end  
+  
+  def armstrong(istart = 10, iend = 999)
+    def darmstrong?(d)
+      res = 0
+      s = d.to_s.size
+      i = d
+      while i > 0
+        res += (i % 10) ** s
+        i /= 10
+      end
+      res == d
+    end
     
+    p (istart..iend).select{|v| darmstrong?(v)}
+    #res = []
+    #istart.step(iend, 1) do |i|
+    #  res << i if darmstrong?(i)
+    #end
+    #p res
   end
   
 end
