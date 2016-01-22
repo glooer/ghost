@@ -223,22 +223,10 @@ module Ghost
   
   def armstrong(istart = 10, iend = 999)
     def darmstrong?(d)
-      res = 0
-      s = d.to_s.size
-      i = d
-      while i > 0
-        res += (i % 10) ** s
-        i /= 10
-      end
-      res == d
+      d.to_s.split("").inject(0){|z, v| z + v.to_i ** d.to_s.size} == d
     end
       
     (istart..iend).select{|v| darmstrong?(v)}
-    #res = []
-    #istart.step(iend, 1) do |i|
-    #  res << i if darmstrong?(i)
-    #end
-    #p res
   end
 
 =begin

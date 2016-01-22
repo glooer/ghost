@@ -66,23 +66,18 @@ p maxPrimeByBin(10)
 p maxPrimeByBin(100)
 p maxPrimeByBin(1000)
 
-
-
 p annagram("a", "a")
 p annagram("aab", "ab")
 
-
-
 foundRepeatMax([1,2,3,3,3,2,2,2,3])
-
 
 p major([1,2,2,2,2,2,2,2,2,3,4,5,6])
 
-
 automorph(1, 1000)
 
-
 p unionab([1,2,3,4,5], [2,3,4,4,5]) #=> 1,2,2,3,3,4,4,4,5,5
-'''
 
 p sortq([1,2,6,4,5,0,0,-3,2,-4,-6]) #=>-3, -4, -6, 0, 0, 1, 2, 6, 4, 5, 2
+'''
+
+p armstrong
