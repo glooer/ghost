@@ -225,10 +225,19 @@ module Ghost
     def darmstrong?(d)
       d.to_s.split("").inject(0){|z, v| z + v.to_i ** d.to_s.size} == d
     end
-      
     (istart..iend).select{|v| darmstrong?(v)}
   end
 
+=begin
+  (35) 
+  Из данного предложения выбрать и напечатать слова, превышающие заданное количество букв, с указанием количества символов слова.
+=end  
+
+  def charsInWords(str, n = 5)
+    escChar = ",.!"
+    str.tr(escChar, "").split.select{|v| v.size > n}.map{|v| "#{v} - #{v.size}"}  
+  end
+  
 =begin
   (38)
   Перегруппировать элементы массива A(n) следующим образом: 
