@@ -231,13 +231,35 @@ module Ghost
       end
       res == d
     end
-    
+      
     p (istart..iend).select{|v| darmstrong?(v)}
     #res = []
     #istart.step(iend, 1) do |i|
     #  res << i if darmstrong?(i)
     #end
     #p res
+  end
+  
+=begin
+  (40) 
+  Даны два массива целых чисел А и В, упорядоченные по возрастанию. 
+  Поместить все элементы этих массивов в массив С, который также должен быть упорядочен по возрастанию. 
+  Сортировать массив С нельзя!
+=end  
+
+  def unionab(a, b)
+    def un(a, b, res)
+      return res + b if a.empty?
+      return res + a if b.empty?
+      
+      if a[0] < b[0]
+        un(a[1..-1], b, res << a[0])
+      else
+        un(a, b[1..-1], res << b[0])
+      end
+    end
+    
+    return un(a, b, [])
   end
   
 end
