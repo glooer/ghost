@@ -85,4 +85,6 @@ charsInWords("Из данного предложения выбрать и на�
 
 perfectNumbers
 
+digitalsqrt
 '''
+factorization
