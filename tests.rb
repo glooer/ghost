@@ -86,5 +86,13 @@ charsInWords("Из данного предложения выбрать и на�
 perfectNumbers
 
 digitalsqrt
+
+factorization
+
+latinSquares
+
+magicSquare([[2, 7, 6], [9, 5, 1], [4, 3, 8]])
+
 '''
-rhyme
+
+p rec
