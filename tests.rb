@@ -87,4 +87,4 @@ perfectNumbers
 
 digitalsqrt
 '''
-factorization
+rhyme

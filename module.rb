@@ -5,16 +5,16 @@ module Ghost
   "Считалка". N ребят располагаются по кругу. Отсчет начинают от первого, удаляют каждого k-го, смыкая круг после каждого удаления. Определите порядок удаления ребят из круга. Замечание. Если k>0, то отсчет ведется по часовой стрелке, иначе против часовой
 =end
 
-  def rhyme(n, k)
+  def rhyme(n = 10, k = 11)
     arr = (1..n).to_a
-    return arr if n < k.abs
     
     res = []
-    #jghgjwhile k < arr.size
-    #  i = k
-      
-    #end
-    
+    i = 0
+    while k.abs < arr.size
+      i = (i + arr.size + k) % arr.size
+      res << arr.delete_at(i)
+    end
+    res += arr
     p res
   end
 
