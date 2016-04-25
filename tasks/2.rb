@@ -10,7 +10,7 @@ include Wrong::Assert
 =end
 
 def shifr(text)
-  text = text.split("")
+  text = text.chars
   abc = text.uniq.sort #получили алфавит
   sabc = abc.shuffle #случайный порядок
   
