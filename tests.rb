@@ -7,7 +7,7 @@ require "module.rb"
 include Ghost
 
 '''
-q
+
 ###
 
 fl = true
